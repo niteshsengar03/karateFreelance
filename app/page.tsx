@@ -227,7 +227,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600" 
-            onClick={() => window.open("https://docs.google.com/forms/d/e/1FAIpQLScH5spqprIEfRYNCykDuoVDVfBwsJqcyVstkyqnTZY0-IapIw/viewform?usp=sharing", "_blank")}
+            onClick={() => window.open("https://forms.gle/7TArc6KcGSptMWhk8", "_blank")}
             >
              CONTACT US
             </Button>
