@@ -439,13 +439,80 @@ export function Navigation() {
           </nav>
 
           {/* Mobile Navigation */}
-          <div className="lg:hidden">
+                    {/* Mobile Navigation */}
+                    <div className="lg:hidden">
             <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(true)} className="text-white">
               <Menu className="w-6 h-6" />
             </Button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="fixed inset-0 bg-black/95 z-50 overflow-auto">
+          <div className="flex justify-end p-4">
+            <Button variant="ghost" size="icon" onClick={() => setIsMobileMenuOpen(false)} className="text-white">
+              <X className="w-6 h-6" />
+            </Button>
+          </div>
+          <nav className="p-4">
+            <ul className="space-y-4">
+              <li>
+                <Link
+                  href="/"
+                  className="text-2xl font-bold text-white hover:text-yellow-400 transition-colors block"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  SHOTOKAN TRADITIONAL<br />
+                  KARATE-DO ASSOCIATION
+                </Link>
+              </li>
+              {menuItems.map((item) => (
+                <li key={item.title}>
+                  <button
+                    onClick={() => setActiveMenu(activeMenu === item.title ? null : item.title)}
+                    className="text-2xl font-bold text-white hover:text-yellow-400 transition-colors w-full text-left flex items-center justify-between"
+                  >
+                    {item.title}
+                    <ChevronDown className={`w-5 h-5 transition-transform ${activeMenu === item.title ? "rotate-180" : ""}`} />
+                  </button>
+                  {activeMenu === item.title && (
+                    <ul className="mt-2 ml-4 space-y-2">
+                      {item.items.map((subItem) =>
+                        subItem.type === "pdf" ? (
+                          <DownloadPDF key={subItem.name} fileName={subItem.fileName}>{subItem.name}</DownloadPDF>
+                        ) : (
+                          <li key={subItem.name}>
+                            <Link href={subItem.href} className="text-lg text-gray-300 hover:text-yellow-400 transition-colors block py-1">
+                              {subItem.name}
+                            </Link>
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  )}
+                </li>
+              ))}
+              <li>
+          <Link href="/history" className="text-2xl font-bold text-white hover:text-yellow-400 transition-colors block">
+            Karate History
+          </Link>
+        </li>
+        <li>
+          <Link href="/gallery" className="text-2xl font-bold text-white hover:text-yellow-400 transition-colors block">
+            Gallery
+          </Link>
+        </li>
+        <li>
+          <Link href="/#contact" className="text-2xl font-bold text-white hover:text-yellow-400 transition-colors block">
+            Contact
+          </Link>
+        </li>
+            </ul>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

@@ -18,14 +18,14 @@ const leaders = [
   {
     name: "Somnath Karate & Fitness Academy",
     position: "Instructor In-charge  : Sensei Somnath Kari",
-    image: "/organization/image1.jpg?height=400&width=400",
+    image: "/organization/image8.jpg?height=400&width=400",
     achievements: ["2nd Dan Black Belt"],
     // experience: "25+ years",
   },
   {
     name: "Ayan’s Institute Of Karate",
     position: "Instructor In-charge  : Sensei Ayan Adhikary",
-    image: "/organization/image2.jpg?height=400&width=400",
+    image: "/organization/image7.jpg?height=400&width=400",
     achievements: ["1st Dan Black Belt"],
     // experience: "18+ years",
   },
@@ -60,14 +60,14 @@ const leaders = [
   {
     name: "Surojit’s  Shotokan School of Karate",
     position: "Instructor In-charge  : Sensei Surojit Mondal",
-    image: "/organization/image7.jpg?height=400&width=400",
+    image: "/organization/image1.jpg?height=400&width=400",
     achievements: ["1st Dan Black Belt"],
     // experience: "25+ years",
   },
   {
     name: "Pratik Karate Academy – South 24 PGS",
     position: "Instructor In-charge  : Sensei Pratik Naskar",
-    image: "/organization/image8.jpg?height=400&width=400",
+    image: "/organization/image2.jpg?height=400&width=400",
     achievements: ["2nd Dan Black Belt"],
     // experience: "18+ years",
   },

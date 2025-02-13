@@ -6,7 +6,7 @@ import { Facebook, Instagram, Twitter, Youtube } from "lucide-react";
 import { motion } from "framer-motion";
 
 const socialLinks = [
-  { icon: Facebook, href: "https://www.facebook.com" },
+  { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61568440858376" },
   { icon: Instagram, href: "https://www.instagram.com" },
   { icon: Twitter, href: "https://www.twitter.com" },
   { icon: Youtube, href: "https://www.youtube.com" },
@@ -53,12 +53,6 @@ export function Footer() {
                 <strong>Mobile 1:</strong>{" "}
                 <a href="tel:+919830451446" className="hover:text-yellow-400">
                   (+91) 9830451446
-                </a>
-              </p>
-              <p>
-                <strong>Mobile 2:</strong>{" "}
-                <a href="tel:+919062715446" className="hover:text-yellow-400">
-                  (+91) 9062715446
                 </a>
               </p>
             </div>

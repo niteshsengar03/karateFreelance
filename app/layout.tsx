@@ -8,8 +8,8 @@ import { Footer } from './components/footer'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Martial Arts Academy',
-  description: 'Learn martial arts and transform your life',
+  title: 'SHOTOKAN TRADITIONAL KARATE-DO ASSOCIATION',
+  description: 'JTK INDIA',
 }
 
 export default function RootLayout({
