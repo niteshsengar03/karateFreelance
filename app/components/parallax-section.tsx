@@ -25,7 +25,7 @@ export function ParallaxSection() {
         }}
       />
       <motion.div className="relative z-10 text-center" style={{ y: textY }}>
-        <h2 className="text-5xl md:text-7xl font-bold text-white text-shadow-lg mb-8">Transform Your Life</h2>
+        <h2 className="text-5xl md:text-7xl font-bold text-white text-shadow-lg mb-8"> JTK INDIA</h2>
         <p className="text-xl md:text-2xl text-white text-shadow-lg max-w-2xl mx-auto px-4">
           Through discipline, respect, and dedication, martial arts can help you achieve your full potential
         </p>

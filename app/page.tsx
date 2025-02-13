@@ -108,14 +108,12 @@ export default function Home() {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold mb-4">Threshold Martial Arts</h2>
+              <h2 className="text-3xl font-bold mb-4">Shotokan Karate</h2>
               <p className="text-gray-600 mb-4">
-                At Threshold Martial Arts we offer martial arts that helps make you and your kids better at life! Not
-                just better at martial arts, but better at life!
+              It is a traditional Japanese martial art founded by Gichin Funakoshi. It emphasizes strong stances, powerful strikes, and precise movements, focusing on kihon (basics), kata (forms), and kumite (sparring). 
               </p>
               <p className="text-gray-600">
-                We blend real martial arts with character & leadership development to create confident kids who can
-                protect themselves!
+              Known for its deep stances and linear techniques, Shotokan develops discipline, speed, and power.
               </p>
             </motion.div>
             <motion.div
@@ -463,7 +461,7 @@ export default function Home() {
                   href="tel:+919830451446"
                   className="bg-black text-yellow-400 px-4 py-2 rounded-full font-semibold hover:bg-gray-900 transition duration-300"
                 >
-                  📞 Call Now: +91 98304 51446
+                  📞 Call Now: +91 9830451446
                 </a>
               </div>
             </motion.div>
@@ -502,7 +500,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center">
                   <Phone className="w-6 h-6 mr-4 text-yellow-400" />
-                  <span>(+91) 9062715446</span>
+                  <span>(+91) 9830451446</span>
                 </div>
                 <div className="flex items-center">
                   <Mail className="w-6 h-6 mr-4 text-yellow-400" />
