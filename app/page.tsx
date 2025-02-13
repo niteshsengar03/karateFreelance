@@ -10,7 +10,7 @@ import { AnimatedCounter } from "@/app/components/animated-counter"
 import { FloatingElements } from "@/app/components/floating-elements"
 import { EventCard } from "@/app/components/event-card"
 import { ParallaxHero } from "@/app/components/parallax-hero"
-import { DynamicBackground } from "@/app/components/dynamic-background"
+// import { DynamicBackground } from "@/app/components/dynamic-background"
 import { FeatureCard } from "@/app/components/feature-card"
 import { TechniqueShowcase } from "@/app/components/technique-showcase"
 import { Input } from "@/app/components/ui/input"
@@ -33,7 +33,7 @@ const teamMembers = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      <DynamicBackground />
+      {/* <DynamicBackground /> */}
 
       {/* Header */}
       <header className="fixed top-0 w-full bg-black/90 text-white z-50">

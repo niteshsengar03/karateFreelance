@@ -1,7 +1,4 @@
 {
-  "/page": "app/page.js",
-  "/leadership/page": "app/leadership/page.js",
-  "/individualMembers/page": "app/individualMembers/page.js",
-  "/about/japanheadq/page": "app/about/japanheadq/page.js",
-  "/history/page": "app/history/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/leadership/page": "app/leadership/page.js"
 }
