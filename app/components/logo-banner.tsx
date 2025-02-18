@@ -124,10 +124,10 @@ const logos = [
     src: "/logos/logo4.jpg",
     alt: "Brand Logo 4",
   },
-  {
-    src: "/logos/logo5.jpg",
-    alt: "Brand Logo 5",
-  },
+  // {
+  //   src: "/logos/logo5.jpg",
+  //   alt: "Brand Logo 5",
+  // },
   {
     src: "/logos/logo6.jpg",
     alt: "Brand Logo 6",

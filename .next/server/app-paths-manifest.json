@@ -1,17 +1,17 @@
 {
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/about/japanheadq/page": "app/about/japanheadq/page.js",
   "/about/indianheadq/page": "app/about/indianheadq/page.js",
+  "/about/japanheadq/page": "app/about/japanheadq/page.js",
   "/about/page": "app/about/page.js",
-  "/events/page": "app/events/page.js",
   "/black-belt-holders/indian-blackbelt/page": "app/black-belt-holders/indian-blackbelt/page.js",
-  "/gallery/page": "app/gallery/page.js",
   "/black-belt-holders/japan-blackbelt/page": "app/black-belt-holders/japan-blackbelt/page.js",
-  "/members/page": "app/members/page.js",
+  "/events/page": "app/events/page.js",
+  "/gallery/page": "app/gallery/page.js",
   "/history/page": "app/history/page.js",
-  "/officials/page": "app/officials/page.js",
   "/individualMembers/page": "app/individualMembers/page.js",
-  "/page": "app/page.js",
-  "/leadership/page": "app/leadership/page.js"
+  "/leadership/page": "app/leadership/page.js",
+  "/members/page": "app/members/page.js",
+  "/officials/page": "app/officials/page.js",
+  "/page": "app/page.js"
 }
