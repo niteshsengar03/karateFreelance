@@ -678,6 +678,7 @@ import {
 import { Button } from "@/app/components/ui/button"
 import { Card, CardContent } from "@/app/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/app/components/ui/tabs"
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/app/components/ui/carousel"
 import { Navigation } from "@/app/components/navigation"
 import { ParallaxSection } from "@/app/components/parallax-section"
 import { AnimatedCounter } from "@/app/components/animated-counter"
@@ -1117,88 +1118,76 @@ export default function Home() {
           >
             PHOTO GALLERY
           </motion.h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[200px]">
-            <motion.div
-              initial={{
-                opacity: 0,
-              }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="relative md:col-span-2 md:row-span-2 group"
-            >
-              <Image
-                src="/gallary1.jpg?height=600&width=800"
-                alt="Gallery Image 1"
-                fill
-                className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="relative group"
-            >
-              <Image
-                src="/gallary2.jpg?height=500&width=400"
-                alt="Gallery Image 2"
-                fill
-                className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="relative group"
-            >
-              <div className="relative w-[320px] h-[420px] group">
-                <Image
-                  src="/gallary3.jpg"
-                  alt="Gallery Image 3"
-                  width={320}
-                  height={420}
-                  className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
-              </div>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-              className="relative group"
-            >
-              <Image
-                src="/gallary4.jpg?height=300&width=400"
-                alt="Gallery Image 4"
-                fill
-                className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="relative group"
-            >
-              <Image
-                src="/gallary5.jpg?height=300&width=400"
-                alt="Gallery Image 5"
-                fill
-                className="object-cover rounded-lg transition-transform duration-300 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg" />
-            </motion.div>
-          </div>
+
+          {/* Carousel for All Images */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <Carousel className="w-full max-w-4xl mx-auto">
+              <CarouselContent>
+                <CarouselItem className="md:basis-1/3">
+                  <div className="relative group rounded-lg overflow-hidden h-80 w-full">
+                    <Image
+                      src="/gallary1.jpg?height=500&width=400"
+                      alt="Gallery Image 1"
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/3">
+                  <div className="relative group rounded-lg overflow-hidden h-80 w-full">
+                    <Image
+                      src="/gallary2.jpg?height=500&width=400"
+                      alt="Gallery Image 2"
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/3">
+                  <div className="relative group rounded-lg overflow-hidden h-80 w-full">
+                    <Image
+                      src="/gallary3.jpg?height=500&width=400"
+                      alt="Gallery Image 3"
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/3">
+                  <div className="relative group rounded-lg overflow-hidden h-80 w-full">
+                    <Image
+                      src="/gallary4.jpg?height=500&width=400"
+                      alt="Gallery Image 4"
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </CarouselItem>
+                <CarouselItem className="md:basis-1/3">
+                  <div className="relative group rounded-lg overflow-hidden h-80 w-full">
+                    <Image
+                      src="/gallary5.jpg?height=500&width=400"
+                      alt="Gallery Image 5"
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious className="hidden md:flex -left-12 bg-yellow-500 text-black hover:bg-yellow-400 border-none" />
+              <CarouselNext className="hidden md:flex -right-12 bg-yellow-500 text-black hover:bg-yellow-400 border-none" />
+            </Carousel>
+          </motion.div>
         </div>
       </section>
 

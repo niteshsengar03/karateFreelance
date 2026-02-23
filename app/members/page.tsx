@@ -202,10 +202,153 @@ export default function MembersPage() {
               </motion.div>
             </TabsContent>
           </AnimatePresence> */}
-          
+
+          {/* New Alternating Layout */}
+          <AnimatePresence mode="wait">
+            <TabsContent value="state" className="mt-0">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="space-y-12"
+              >
+                {stateMembers.map((member, index) => (
+                  <motion.div
+                    key={member.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-0 items-center"
+                  >
+                    {/* Image - Big Left Side */}
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      className="relative group md:col-span-1"
+                    >
+                      <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-yellow-400/30 bg-gray-900 w-72 md:w-80">
+                        <Image
+                          src={member.image || "/placeholder.svg"}
+                          alt={member.name}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+                    </motion.div>
+
+                    {/* Text Content - Small Right Side */}
+                    <motion.div className="md:col-span-2">
+                      <div className="bg-gray-900/50 backdrop-blur-sm border border-yellow-400/20 rounded-lg p-4">
+                        <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
+                        <div className="w-6 h-0.5 bg-yellow-400 mb-2"></div>
+                        
+                        <div className="space-y-1.5 text-gray-300 mb-2">
+                          <div className="flex items-center gap-2">
+                            <MapPin className="w-3 h-3 text-yellow-400 flex-shrink-0" />
+                            <span className="text-xs">{member.location}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Users className="w-3 h-3 text-yellow-400 flex-shrink-0" />
+                            <span className="text-xs">{member.members} Members</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Calendar className="w-3 h-3 text-yellow-400 flex-shrink-0" />
+                            <span className="text-xs">Est. {member.yearEstablished}</span>
+                          </div>
+                        </div>
+
+                        <div className="pt-2 border-t border-gray-700">
+                          <h4 className="text-xs font-semibold text-yellow-400 mb-1 uppercase tracking-wider">Achievements</h4>
+                          <div className="space-y-0.5">
+                            {member.achievements.slice(0, 1).map((achievement) => (
+                              <div key={achievement} className="flex items-start gap-1.5">
+                                <Award className="w-2 h-2 text-yellow-400 flex-shrink-0 mt-0.5" />
+                                <span className="text-xs text-gray-400">{achievement}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </TabsContent>
+
+            <TabsContent value="affiliated" className="mt-0">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="space-y-12"
+              >
+                {affiliatedMembers.map((member, index) => (
+                  <motion.div
+                    key={member.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-0 items-center"
+                  >
+                    {/* Image - Big Left Side */}
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      className="relative group md:col-span-1"
+                    >
+                      <div className="relative aspect-square overflow-hidden rounded-lg border-2 border-yellow-400/30 bg-gray-900 w-72 md:w-80">
+                        <Image
+                          src={member.image || "/placeholder.svg"}
+                          alt={member.name}
+                          fill
+                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      </div>
+                    </motion.div>
+
+                    {/* Text Content - Right Side - Compact */}
+                    <motion.div className="md:col-span-2">
+                      <div className="bg-gray-900/50 backdrop-blur-sm border border-yellow-400/20 rounded-lg p-4">
+                        <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
+                        <div className="w-6 h-0.5 bg-yellow-400 mb-2"></div>
+                        
+                        <div className="space-y-1.5 text-gray-300 mb-2">
+                          <div className="flex items-center gap-2">
+                            <MapPin className="w-3 h-3 text-yellow-400 flex-shrink-0" />
+                            <span className="text-xs">{member.location}</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Users className="w-3 h-3 text-yellow-400 flex-shrink-0" />
+                            <span className="text-xs">{member.members} Members</span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Calendar className="w-3 h-3 text-yellow-400 flex-shrink-0" />
+                            <span className="text-xs">Est. {member.yearEstablished}</span>
+                          </div>
+                        </div>
+
+                        <div className="pt-2 border-t border-gray-700">
+                          <h4 className="text-xs font-semibold text-yellow-400 mb-1 uppercase tracking-wider">Achievements</h4>
+                          <div className="space-y-0.5">
+                            {member.achievements.slice(0, 1).map((achievement) => (
+                              <div key={achievement} className="flex items-start gap-1.5">
+                                <Award className="w-2 h-2 text-yellow-400 flex-shrink-0 mt-0.5" />
+                                <span className="text-xs text-gray-400">{achievement}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </TabsContent>
+          </AnimatePresence>
         </Tabs>
       </div>
-      <ComingSoon/>
     </div>
   )
 }

@@ -259,7 +259,9 @@ import Image from "next/image"
 
 type MenuItem = {
   name: string
-} & ({ type?: "link"; href: string } | { type: "pdf"; fileName: string })
+} & ({ type?: "link"; href: string; subItems?: MenuItem[] } | { type: "pdf"; fileName: string })
+
+type LinkMenuItem = Extract<MenuItem, { type?: "link" }>
 
 type NavigationCategory = {
   title: string
@@ -322,9 +324,31 @@ const menuItems: NavigationCategory[] = [
   {
     title: "MEMBERS",
     items: [
-      { type: "link", name: "STATE MEMBERS", href: "/members" },
-      { type: "link", name: "ORGANISATION MEMBERS", href: "/leadership" },
-      { type: "link", name: "INDIVIDUAL MEMBERS", href: "/individualMembers" },
+      { type: "link", name: "AFFILIATED MEMBERS", href: "/members" },
+      // { type: "link", name: "COMMISSIONS", href: "/leadership" },
+      {
+        type: "link",
+        name: "COMMISIONS",
+        href: "/individualMembers",
+        subItems: [
+          { type: "link", name: "REFEREE COMMISSION", href: "/commission/refree" },
+          { type: "link", name: "SPORTS COMMISSION", href: "/commission/sports" },
+          { type: "link", name: "TECHNICAL & COMMUNICATION COMMISSION", href: "/commission/technical&Communication" },
+          { type: "link", name: "TOURNAMENT COMMISSION", href: "/commission/tournament" },
+          { type: "link", name: "WOMEN COMMISSION", href: "/commission/women" },
+        ],
+      },
+      {
+        type: "link",
+        name: "CELLS",
+        href: "/individualMembers",
+        subItems: [
+          { type: "link", name: "LEGAL CELLS", href: "/cells/legal" },
+          { type: "link", name: "MEDIA CELLS", href: "/cells/media" },
+          { type: "link", name: "MEDICAL CELLS", href: "/cells/medical" },
+          { type: "link", name: "SECURITY CELLS", href: "/cells/security" },
+        ],
+      },
     ],
   },
   {
@@ -348,6 +372,7 @@ const menuItems: NavigationCategory[] = [
 
 export function Navigation() {
   const [activeMenu, setActiveMenu] = useState<string | null>(null)
+  const [activeSubMenu, setActiveSubMenu] = useState<string | null>(null)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   return (
@@ -391,21 +416,40 @@ export function Navigation() {
 
                   {activeMenu === item.title && (
                     <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-50">
-                      {item.items.map((subItem) =>
-                        subItem.type === "pdf" ? (
-                          <DownloadPDF key={subItem.name} fileName={subItem.fileName}>
-                            {subItem.name}
-                          </DownloadPDF>
-                        ) : (
-                          <Link
-                            key={subItem.name}
-                            href={subItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-yellow-600 transition-colors"
-                          >
-                            {subItem.name}
-                          </Link>
-                        ),
-                      )}
+                      {item.items.map((subItem) => (
+                        <div key={subItem.name} className="relative group">
+                          {subItem.type === "pdf" ? (
+                            <DownloadPDF fileName={subItem.fileName}>
+                              {subItem.name}
+                            </DownloadPDF>
+                          ) : subItem.subItems && subItem.subItems.length > 0 ? (
+                            <>
+                              <button className="flex items-center justify-between w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-yellow-600 transition-colors">
+                                {subItem.name}
+                                <ChevronDown className="w-3 h-3 ml-2" />
+                              </button>
+                              <div className="hidden group-hover:block absolute left-full top-0 ml-1 w-48 bg-white rounded-md shadow-lg py-2 z-50">
+                                {subItem.subItems.map((nestedItem) => (
+                                  <Link
+                                    key={nestedItem.name}
+                                    href={(nestedItem as LinkMenuItem).href}
+                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-yellow-600 transition-colors"
+                                  >
+                                    {nestedItem.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            </>
+                          ) : (
+                            <Link
+                              href={subItem.href}
+                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-yellow-600 transition-colors"
+                            >
+                              {subItem.name}
+                            </Link>
+                          )}
+                        </div>
+                      ))}
                     </div>
                   )}
                 </li>
@@ -471,17 +515,47 @@ export function Navigation() {
                   </button>
                   {activeMenu === item.title && (
                     <ul className="mt-2 ml-4 space-y-2">
-                      {item.items.map((subItem) =>
-                        subItem.type === "pdf" ? (
-                          <DownloadPDF
-                            key={subItem.name}
-                            fileName={subItem.fileName}
-                            onDownload={() => setIsMobileMenuOpen(false)}
-                          >
-                            {subItem.name}
-                          </DownloadPDF>
-                        ) : (
-                          <li key={subItem.name}>
+                      {item.items.map((subItem) => (
+                        <li key={subItem.name}>
+                          {subItem.type === "pdf" ? (
+                            <DownloadPDF
+                              fileName={subItem.fileName}
+                              onDownload={() => setIsMobileMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </DownloadPDF>
+                          ) : subItem.subItems && subItem.subItems.length > 0 ? (
+                            <>
+                              <button
+                                onClick={() =>
+                                  setActiveSubMenu(activeSubMenu === subItem.name ? null : subItem.name)
+                                }
+                                className="text-lg text-gray-300 hover:text-yellow-400 transition-colors block py-1 flex items-center justify-between w-full"
+                              >
+                                {subItem.name}
+                                <ChevronDown
+                                  className={`w-4 h-4 transition-transform ${
+                                    activeSubMenu === subItem.name ? "rotate-180" : ""
+                                  }`}
+                                />
+                              </button>
+                              {activeSubMenu === subItem.name && (
+                                <ul className="mt-2 ml-4 space-y-1">
+                                  {subItem.subItems.map((nestedItem) => (
+                                    <li key={nestedItem.name}>
+                                      <Link
+                                        href={(nestedItem as LinkMenuItem).href}
+                                        className="text-base text-gray-400 hover:text-yellow-400 transition-colors block py-1"
+                                        onClick={() => setIsMobileMenuOpen(false)}
+                                      >
+                                        {nestedItem.name}
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              )}
+                            </>
+                          ) : (
                             <Link
                               href={subItem.href}
                               className="text-lg text-gray-300 hover:text-yellow-400 transition-colors block py-1"
@@ -489,9 +563,9 @@ export function Navigation() {
                             >
                               {subItem.name}
                             </Link>
-                          </li>
-                        ),
-                      )}
+                          )}
+                        </li>
+                      ))}
                     </ul>
                   )}
                 </li>
