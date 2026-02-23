@@ -96,7 +96,7 @@ export default function MembersPage() {
           </div>
 
           {/* <AnimatePresence mode="wait">
-            <TabsContent value="state" className="mt-0">
+            <TabsContent key="state" value="state" className="mt-0">
               <motion.div
                 variants={container}
                 initial="hidden"
@@ -215,7 +215,7 @@ export default function MembersPage() {
               >
                 {stateMembers.map((member, index) => (
                   <motion.div
-                    key={member.id}
+                    key={`state-${member.id}`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -261,8 +261,8 @@ export default function MembersPage() {
                         <div className="pt-2 border-t border-gray-700">
                           <h4 className="text-xs font-semibold text-yellow-400 mb-1 uppercase tracking-wider">Achievements</h4>
                           <div className="space-y-0.5">
-                            {member.achievements.slice(0, 1).map((achievement) => (
-                              <div key={achievement} className="flex items-start gap-1.5">
+                            {member.achievements.slice(0, 1).map((achievement, ai) => (
+                              <div key={`state-${member.id}-ach-${ai}`} className="flex items-start gap-1.5">
                                 <Award className="w-2 h-2 text-yellow-400 flex-shrink-0 mt-0.5" />
                                 <span className="text-xs text-gray-400">{achievement}</span>
                               </div>
@@ -276,7 +276,7 @@ export default function MembersPage() {
               </motion.div>
             </TabsContent>
 
-            <TabsContent value="affiliated" className="mt-0">
+            <TabsContent key="affiliated" value="affiliated" className="mt-0">
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -286,7 +286,7 @@ export default function MembersPage() {
               >
                 {affiliatedMembers.map((member, index) => (
                   <motion.div
-                    key={member.id}
+                    key={`affiliated-${member.id}`}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -332,8 +332,8 @@ export default function MembersPage() {
                         <div className="pt-2 border-t border-gray-700">
                           <h4 className="text-xs font-semibold text-yellow-400 mb-1 uppercase tracking-wider">Achievements</h4>
                           <div className="space-y-0.5">
-                            {member.achievements.slice(0, 1).map((achievement) => (
-                              <div key={achievement} className="flex items-start gap-1.5">
+                            {member.achievements.slice(0, 1).map((achievement, ai) => (
+                              <div key={`affiliated-${member.id}-ach-${ai}`} className="flex items-start gap-1.5">
                                 <Award className="w-2 h-2 text-yellow-400 flex-shrink-0 mt-0.5" />
                                 <span className="text-xs text-gray-400">{achievement}</span>
                               </div>
