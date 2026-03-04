@@ -316,9 +316,9 @@ const menuItems: NavigationCategory[] = [
     title: "ABOUT US",
     items: [
       { type: "link", name: "ABOUT US", href: "/about" },
-      { type: "link", name: "JAPAN HEAD QUARTER", href: "/about/japanheadq" },
-      { type: "link", name: "INDIA HEAD QUARTER", href: "/about/indianheadq" },
-      { type: "link", name: "EXECUTIVE MEMBER", href: "/officials" },
+      { type: "link", name: "JAPAN WORLD HEAD QUARTER", href: "/about/japanheadq" },
+      { type: "link", name: "INDIA NATIONAL HEAD QUARTER", href: "/about/indianheadq" },
+      { type: "link", name: "EXECUTIVE COMMITTEE", href: "/officials" },
     ],
   },
   {

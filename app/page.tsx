@@ -654,12 +654,12 @@
 //   )
 // }
 
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   MapPin,
   Phone,
@@ -674,36 +674,47 @@ import {
   Globe2,
   Map,
   Crown,
-} from "lucide-react"
-import { Button } from "@/app/components/ui/button"
-import { Card, CardContent } from "@/app/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/app/components/ui/tabs"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/app/components/ui/carousel"
-import { Navigation } from "@/app/components/navigation"
-import { ParallaxSection } from "@/app/components/parallax-section"
-import { AnimatedCounter } from "@/app/components/animated-counter"
-import { FloatingElements } from "@/app/components/floating-elements"
-import { ParallaxHero } from "@/app/components/parallax-hero"
-import { TechniqueShowcase } from "@/app/components/technique-showcase"
-import { LogoBanner } from "./components/logo-banner"
+} from "lucide-react";
+import { Button } from "@/app/components/ui/button";
+import { Card, CardContent } from "@/app/components/ui/card";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/app/components/ui/tabs";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/app/components/ui/carousel";
+import { Navigation } from "@/app/components/navigation";
+import { ParallaxSection } from "@/app/components/parallax-section";
+import { AnimatedCounter } from "@/app/components/animated-counter";
+import { FloatingElements } from "@/app/components/floating-elements";
+import { ParallaxHero } from "@/app/components/parallax-hero";
+import { TechniqueShowcase } from "@/app/components/technique-showcase";
+import { LogoBanner } from "./components/logo-banner";
 
 const teamMembers = [
   {
     image: "/image2.jpg?height=400&width=300",
-    name: "Mr.NITESH PATRA",
+    name: "SHIHAN TAPAN DHARA",
     post: "President",
   },
   {
     image: "/image3.jpg?height=600&width=300",
     name: "SHIHAN AMIN ALI",
-    post: "General Secretary , Chairman & Founder",
+    post: "General Secretary & Chariman",
   },
-]
+];
 
 interface AffiliationCardProps {
-  icon: React.ReactNode
-  title: string
-  description: string
+  icon: React.ReactNode;
+  title: string;
+  description: string;
 }
 
 function AffiliationCard({ icon, title, description }: AffiliationCardProps) {
@@ -715,7 +726,7 @@ function AffiliationCard({ icon, title, description }: AffiliationCardProps) {
         <p className="text-gray-600">{description}</p>
       </CardContent>
     </Card>
-  )
+  );
 }
 
 export default function Home() {
@@ -727,7 +738,11 @@ export default function Home() {
       <header className="fixed top-0 w-full bg-black/90 text-white z-50">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <Image
                 src="/home_image.jpg"
                 alt="Threshold Martial Arts Logo"
@@ -774,12 +789,14 @@ export default function Home() {
             >
               <h2 className="text-3xl font-bold mb-4">Shotokan Karate</h2>
               <p className="text-gray-600 mb-4">
-                It is a traditional Japanese martial art founded by Gichin Funakoshi. It emphasizes strong stances,
-                powerful strikes, and precise movements, focusing on kihon (basics), kata (forms), and kumite
-                (sparring).
+                It is a traditional Japanese martial art founded by Gichin
+                Funakoshi. It emphasizes strong stances, powerful strikes, and
+                precise movements, focusing on kihon (basics), kata (forms), and
+                kumite (sparring).
               </p>
               <p className="text-gray-600">
-                Known for its deep stances and linear techniques, Shotokan develops discipline, speed, and power.
+                Known for its deep stances and linear techniques, Shotokan
+                develops discipline, speed, and power.
               </p>
             </motion.div>
             <motion.div
@@ -883,7 +900,9 @@ export default function Home() {
               <TabsTrigger value="overview">Overview</TabsTrigger>
               <TabsTrigger value="jtk">JTK</TabsTrigger>
               <TabsTrigger value="kio">KIO</TabsTrigger>
-              <TabsTrigger value="government">Government Trust</TabsTrigger>
+              <TabsTrigger value="government">
+                Legal Status & Registration
+              </TabsTrigger>
             </TabsList>
 
             <TabsContent value="overview">
@@ -922,17 +941,24 @@ export default function Home() {
                   <div>
                     <div className="flex items-center gap-4 mb-6">
                       <Trophy className="w-12 h-12 text-yellow-500" />
-                      <h3 className="text-2xl font-semibold">Japan Traditional Karate Association (JTK)</h3>
+                      <h3 className="text-2xl font-semibold">
+                        Japan Traditional Karate Association (JTK)
+                      </h3>
                     </div>
                     <p className="text-gray-700 mb-4">
-                      As an Affiliated Member of JTK HQ Japan, we are part of an international Shotokan organization
-                      with worldwide branches. This affiliation ensures that our training is deeply rooted in authentic
-                      Shotokan traditions.
+                      As an Affiliated Member of JTK HQ Japan, we are part of an
+                      international Shotokan organization with worldwide
+                      branches. This affiliation ensures that our training is
+                      deeply rooted in authentic Shotokan traditions.
                     </p>
                     <ul className="list-disc list-inside text-gray-700">
                       <li>Access to international training resources</li>
-                      <li>Participation in global JTK events and tournaments</li>
-                      <li>Direct connection to the birthplace of Shotokan Karate</li>
+                      <li>
+                        Participation in global JTK events and tournaments
+                      </li>
+                      <li>
+                        Direct connection to the birthplace of Shotokan Karate
+                      </li>
                     </ul>
                   </div>
                   <motion.div
@@ -962,12 +988,15 @@ export default function Home() {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <Trophy className="w-12 h-12 text-yellow-500" />
-                  <h3 className="text-2xl font-semibold">Karate India Organisation (KIO)</h3>
+                  <h3 className="text-2xl font-semibold">
+                    Karate India Organisation (KIO)
+                  </h3>
                 </div>
                 <p className="text-gray-700 mb-8 flex items-center gap-2">
                   <Info className="w-5 h-5 text-blue-500 flex-shrink-0" />
-                  As an Associate Member of KIO, we are connected to a broader network of karate organizations. KIO's
-                  affiliations extend our reach and recognition.
+                  As an Associate Member of KIO, we are connected to a broader
+                  network of karate organizations. KIO's affiliations extend our
+                  reach and recognition.
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                   <motion.div
@@ -979,8 +1008,12 @@ export default function Home() {
                     <div className="flex items-center gap-4">
                       <Globe2 className="w-10 h-10 text-blue-600" />
                       <div>
-                        <h4 className="font-semibold">World Karate Federation (WKF)</h4>
-                        <p className="text-sm text-gray-600">Global Governing Body</p>
+                        <h4 className="font-semibold">
+                          World Karate Federation (WKF)
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          Global Governing Body
+                        </p>
                       </div>
                     </div>
                   </motion.div>
@@ -993,8 +1026,12 @@ export default function Home() {
                     <div className="flex items-center gap-4">
                       <Map className="w-10 h-10 text-green-600" />
                       <div>
-                        <h4 className="font-semibold">Asian Karate Federation (AKF)</h4>
-                        <p className="text-sm text-gray-600">Continental Leadership</p>
+                        <h4 className="font-semibold">
+                          Asian Karate Federation (AKF)
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          Continental Leadership
+                        </p>
                       </div>
                     </div>
                   </motion.div>
@@ -1007,8 +1044,12 @@ export default function Home() {
                     <div className="flex items-center gap-4">
                       <Users className="w-10 h-10 text-purple-600" />
                       <div>
-                        <h4 className="font-semibold">South Asian Karate Federation (SAKF)</h4>
-                        <p className="text-sm text-gray-600">Regional Excellence</p>
+                        <h4 className="font-semibold">
+                          South Asian Karate Federation (SAKF)
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          Regional Excellence
+                        </p>
                       </div>
                     </div>
                   </motion.div>
@@ -1021,8 +1062,12 @@ export default function Home() {
                     <div className="flex items-center gap-4">
                       <Crown className="w-10 h-10 text-yellow-600" />
                       <div>
-                        <h4 className="font-semibold">Commonwealth Karate Federation (CKF)</h4>
-                        <p className="text-sm text-gray-600">International Partnership</p>
+                        <h4 className="font-semibold">
+                          Commonwealth Karate Federation (CKF)
+                        </h4>
+                        <p className="text-sm text-gray-600">
+                          International Partnership
+                        </p>
                       </div>
                     </div>
                   </motion.div>
@@ -1039,32 +1084,22 @@ export default function Home() {
               >
                 <h3 className="text-2xl font-semibold mb-4 flex items-center">
                   <Award className="w-10 h-10 mr-4 text-yellow-500" />
-                  Government Trust Act Registration
+                  Legal Status & Registration
                 </h3>
                 <p className="text-gray-700 mb-6">
-                  We are proud to be registered under the Government Trust Act, a testament to our commitment to
-                  integrity, transparency, and excellence in Shotokan Karate instruction.
+                  Shotokan Traditional Karate-Do Association is a legally
+                  constituted and professionally managed martial arts
+                  organization, established in accordance with the applicable
+                  laws of India. The Association is registered under the Trust
+                  Act, ISO Certified, MSME Registered (Government of India), and
+                  registered with NITI Aayog (Government of India). These
+                  registrations reflect the Association’s commitment to
+                  transparency, compliance, and good governance and are
+                  maintained solely for organizational identity and
+                  administrative purposes. The Association functions
+                  independently, dedicated to the authentic promotion and
+                  development of Traditional Shotokan Karate-Do.
                 </p>
-                <div className="bg-yellow-100 border-l-4 border-yellow-500 p-4 mb-6">
-                  <p className="text-sm text-yellow-700">
-                    This registration ensures that our organization adheres to strict governmental standards and
-                    operates with full legal compliance.
-                  </p>
-                </div>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-2 text-green-500" />
-                    Legally recognized institution
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-2 text-green-500" />
-                    Adherence to financial transparency
-                  </li>
-                  <li className="flex items-center">
-                    <CheckCircle className="w-5 h-5 mr-2 text-green-500" />
-                    Commitment to ethical practices
-                  </li>
-                </ul>
               </motion.div>
             </TabsContent>
           </Tabs>
@@ -1088,7 +1123,8 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg md:text-xl mb-8 max-w-2xl mx-auto"
           >
-            Join our community and discover the transformative power of martial arts
+            Join our community and discover the transformative power of martial
+            arts
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1098,7 +1134,9 @@ export default function Home() {
             <Button
               size="lg"
               className="bg-yellow-500 hover:bg-yellow-600"
-              onClick={() => window.open("https://forms.gle/7TArc6KcGSptMWhk8", "_blank")}
+              onClick={() =>
+                window.open("https://forms.gle/7TArc6KcGSptMWhk8", "_blank")
+              }
             >
               CONTACT US
             </Button>
@@ -1270,12 +1308,16 @@ export default function Home() {
             >
               <h3 className="text-2xl font-semibold mb-6">Get in Touch</h3>
               <p className="text-gray-300 mb-8">
-                Have questions about our programs or want to start your martial arts journey? We're here to help!
+                Have questions about our programs or want to start your martial
+                arts journey? We're here to help!
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">
                   <MapPin className="w-6 h-6 mr-4 text-yellow-400" />
-                  <span>18/2/2 Benod Behari Aditya Lane , BAKSARA Howrah,Pin - 711110</span>
+                  <span>
+                    18/2/2 Benod Behari Aditya Lane , BAKSARA Howrah,Pin -
+                    711110
+                  </span>
                 </div>
                 <div className="flex items-center">
                   <Phone className="w-6 h-6 mr-4 text-yellow-400" />
@@ -1295,15 +1337,18 @@ export default function Home() {
       <section className="bg-yellow-400 relative z-10">
         <div className="container mx-auto px-4 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between">
-            <h2 className="text-2xl font-bold mb-4 md:mb-0">SHOTOKAN TRADITIONAL KARATE-DO ASSOCIATION</h2>
+            <h2 className="text-2xl font-bold mb-4 md:mb-0">
+              SHOTOKAN TRADITIONAL KARATE-DO ASSOCIATION
+            </h2>
             <div className="flex flex-col md:flex-row items-center gap-4">
-              <span className="font-bold text-center md:text-left">FOR ENQUIRY</span>
+              <span className="font-bold text-center md:text-left">
+                FOR ENQUIRY
+              </span>
               <Button variant="destructive">stkaindia@gmail.com</Button>
             </div>
           </div>
         </div>
       </section>
     </div>
-  )
+  );
 }
-

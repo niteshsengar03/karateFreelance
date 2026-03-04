@@ -1,15 +1,30 @@
-import { Award, Trophy, Users, BookOpen, Globe, Shield, Star, Heart } from "lucide-react"
-import { Card, CardContent, CardHeader, CardTitle } from "@/app/components/ui/card"
-import { Button } from "@/app/components/ui/button"
+import {
+  Award,
+  Trophy,
+  Users,
+  BookOpen,
+  Globe,
+  Shield,
+  Star,
+  Heart,
+} from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/app/components/ui/card";
+import { Button } from "@/app/components/ui/button";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 
 export default function AboutPage() {
   const offerings = [
     {
       icon: BookOpen,
       title: "Comprehensive Training",
-      description: "Covering Kihon (fundamentals), Kata (forms), and Kumite (sparring)",
+      description:
+        "Covering Kihon (fundamentals), Kata (forms), and Kumite (sparring)",
     },
     {
       icon: Award,
@@ -19,30 +34,35 @@ export default function AboutPage() {
     {
       icon: Trophy,
       title: "Competitions",
-      description: "Opportunities to participate in local, national, and international tournaments",
+      description:
+        "Opportunities to participate in local, national, and international tournaments",
     },
     {
       icon: Users,
       title: "Seminars & Workshops",
-      description: "Regular training events led by expert instructors from India and Japan",
+      description:
+        "Regular training events led by expert instructors from India and Japan",
     },
-  ]
+  ];
 
   const reasons = [
     {
       icon: Shield,
       title: "Authenticity",
-      description: "Direct affiliation with JTK Japan ensures training that adheres to traditional standards",
+      description:
+        "Direct affiliation with JTK Japan ensures training that adheres to traditional standards",
     },
     {
       icon: Star,
       title: "Expert Guidance",
-      description: "Our instructors are certified and experienced, with extensive knowledge of Shotokan Karate",
+      description:
+        "Our instructors are certified and experienced, with extensive knowledge of Shotokan Karate",
     },
     {
       icon: Globe,
       title: "Global Opportunities",
-      description: "Access to international championships, seminars, and cultural exchanges",
+      description:
+        "Access to international championships, seminars, and cultural exchanges",
     },
     {
       icon: Heart,
@@ -50,20 +70,21 @@ export default function AboutPage() {
       description:
         "Beyond physical skills, we focus on character building, mental discipline, and personal development",
     },
-  ]
+  ];
 
   const teamMembers = [
     {
       image: "/image2.jpg?height=400&width=300",
-      name: "Mr.NITESH PATRA",
-      post: "President"
+      name: "SHIHAN TAPAN DHARA",
+      post: "President",
     },
     {
       image: "/image4.jpg?height=600&width=300",
       name: "SHIHAN AMIN ALI",
-      post: "General Secretary , Chairman & Founder"
-    }
-  ]
+      // post: "General Secretary , Chairman & Founder"
+      post: "General Secretary & Chariman",
+    },
+  ];
 
   return (
     <main className="min-h-screen bg-[#0B1120] pt-32">
@@ -75,7 +96,8 @@ export default function AboutPage() {
               Shotokan Traditional Karate-Do Association
             </h1>
             <p className="text-lg md:text-xl text-gray-400">
-              The official representative of the Japan Traditional Karate Association (JTKA) in India
+              The official representative of the Japan Traditional Karate
+              Association (JTKA) in India
             </p>
           </div>
         </div>
@@ -88,14 +110,18 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl font-bold mb-6 text-white">Who We Are</h2>
               <p className="text-gray-400 mb-6">
-                The JTK India Branch - Shotokan Traditional Karate-Do Association is the official representative of the
-                Japan Traditional Karate Association (JTKA) in India. Dedicated to the practice, preservation, and
-                promotion of traditional Shotokan Karate, our mission is to provide authentic training and foster a
-                community of disciplined, skilled, and respectful practitioners.
+                The JTK India Branch - Shotokan Traditional Karate-Do
+                Association is the official representative of the Japan
+                Traditional Karate Association (JTKA) in India. Dedicated to the
+                practice, preservation, and promotion of traditional Shotokan
+                Karate, our mission is to provide authentic training and foster
+                a community of disciplined, skilled, and respectful
+                practitioners.
               </p>
               <p className="text-gray-400">
-                As a proud affiliate of JTK Japan, we follow the highest standards of karate instruction, ensuring that
-                our members gain a deep understanding of the art and its philosophy.
+                As a proud affiliate of JTK Japan, we follow the highest
+                standards of karate instruction, ensuring that our members gain
+                a deep understanding of the art and its philosophy.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-4">
@@ -130,7 +156,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      
+
       {/* <section className="py-16 bg-[#0B1120]">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
@@ -158,24 +184,38 @@ export default function AboutPage() {
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="bg-[#0B1120] border-[#1F2937]">
               <CardHeader>
-                <CardTitle className="text-2xl text-white">Our Vision</CardTitle>
+                <CardTitle className="text-2xl text-white">
+                  Our Vision
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-400">
-                  Our vision is to spread the values of traditional karate across India, nurturing individuals who excel
-                  both on and off the mat.
+                  Our vision is to spread the values of traditional karate
+                  across India, nurturing individuals who excel both on and off
+                  the mat.
                 </p>
               </CardContent>
             </Card>
             <Card className="bg-[#0B1120] border-[#1F2937]">
               <CardHeader>
-                <CardTitle className="text-2xl text-white">Our Mission</CardTitle>
+                <CardTitle className="text-2xl text-white">
+                  Our Mission
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc list-inside space-y-2 text-gray-400">
-                  <li>Provide authentic Shotokan Karate training aligned with JTKA standards.</li>
-                  <li>Develop disciplined and skilled karateka who embody respect, perseverance, and humility.</li>
-                  <li>Promote the cultural and philosophical essence of traditional Japanese karate.</li>
+                  <li>
+                    Provide authentic Shotokan Karate training aligned with JTKA
+                    standards.
+                  </li>
+                  <li>
+                    Develop disciplined and skilled karateka who embody respect,
+                    perseverance, and humility.
+                  </li>
+                  <li>
+                    Promote the cultural and philosophical essence of
+                    traditional Japanese karate.
+                  </li>
                 </ul>
               </CardContent>
             </Card>
@@ -186,13 +226,17 @@ export default function AboutPage() {
       {/* What We Offer Section */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">What We Offer</h2>
+          <h2 className="text-3xl font-bold text-center mb-12 text-white">
+            What We Offer
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {offerings.map((offering, index) => (
               <Card key={index} className="bg-[#131B2E] border-[#1F2937]">
                 <CardHeader>
                   <offering.icon className="w-10 h-10 mb-4 text-yellow-400" />
-                  <CardTitle className="text-xl text-white">{offering.title}</CardTitle>
+                  <CardTitle className="text-xl text-white">
+                    {offering.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-400">{offering.description}</p>
@@ -214,7 +258,9 @@ export default function AboutPage() {
               <Card key={index} className="bg-[#0B1120] border-[#1F2937]">
                 <CardHeader>
                   <reason.icon className="w-10 h-10 mb-4 text-yellow-400" />
-                  <CardTitle className="text-xl text-white">{reason.title}</CardTitle>
+                  <CardTitle className="text-xl text-white">
+                    {reason.title}
+                  </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-400">{reason.description}</p>
@@ -229,38 +275,47 @@ export default function AboutPage() {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-white">Our Presence in India</h2>
+            <h2 className="text-3xl font-bold mb-6 text-white">
+              Our Presence in India
+            </h2>
             <p className="text-gray-400 mb-12">
-              The Shotokan Traditional Karate-Do Association has a growing network of dojos and instructors across the
-              country. Whether you are in a major city or a smaller town, we are dedicated to bringing traditional
-              karate training closer to you.
+              The Shotokan Traditional Karate-Do Association has a growing
+              network of dojos and instructors across the country. Whether you
+              are in a major city or a smaller town, we are dedicated to
+              bringing traditional karate training closer to you.
             </p>
 
             <div className="bg-[#131B2E] p-8 rounded-lg border border-[#1F2937]">
               <h3 className="text-2xl font-bold mb-4 text-white">Join Us</h3>
               <p className="text-gray-400 mb-6">
-                Be a part of the Shotokan Traditional Karate-Do Association family and embark on a journey of growth,
-                discipline, and excellence in Shotokan Karate. Whether you are a beginner, an advanced practitioner, or
-                a dojo seeking affiliation, we welcome you to join us.
+                Be a part of the Shotokan Traditional Karate-Do Association
+                family and embark on a journey of growth, discipline, and
+                excellence in Shotokan Karate. Whether you are a beginner, an
+                advanced practitioner, or a dojo seeking affiliation, we welcome
+                you to join us.
               </p>
               <div className="flex flex-wrap gap-4">
-              <Link href="#contact" passHref>
-                <Button asChild className="bg-yellow-500 hover:bg-yellow-600 text-white">
-                   <span>Contact Us</span>
-                </Button>
-              </Link>
-              <Link href="/about" passHref>
-                <Button asChild className="bg-yellow-500 hover:bg-yellow-600 text-white">
-                  <span>Learn More</span>
-                </Button>
-              </Link>
-  
+                <Link href="#contact" passHref>
+                  <Button
+                    asChild
+                    className="bg-yellow-500 hover:bg-yellow-600 text-white"
+                  >
+                    <span>Contact Us</span>
+                  </Button>
+                </Link>
+                <Link href="/about" passHref>
+                  <Button
+                    asChild
+                    className="bg-yellow-500 hover:bg-yellow-600 text-white"
+                  >
+                    <span>Learn More</span>
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
-  )
+  );
 }
-

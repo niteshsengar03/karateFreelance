@@ -11,11 +11,11 @@ import ComingSoon from "../components/commingsoon"
 const stateMembers = [
   {
     id: 1,
-    name: "Elite Martial Arts Academy",
+    name: "Sensei Mrinmoy Acharya",
     image: "/placeholder.svg?height=400&width=400",
-    location: "New York",
+    location: "West Bengal",
     members: 250,
-    achievements: ["State Champion 2023", "Best Training Center"],
+    achievements: ["Shotokan Traditional Karate-Do Association (West Bengal)"],
     yearEstablished: 2010,
   },
   {

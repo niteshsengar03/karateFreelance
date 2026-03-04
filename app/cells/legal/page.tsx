@@ -8,7 +8,7 @@ import { Badge } from "@/app/components/ui/badge"
 import { Users, Award, Trophy, Star } from "lucide-react"
 
 const stats = [
-  { icon: Users, label: "Students Trained", value: "1000+" },
+  { icon: Users, label: "Student Trained", value: "1000+" },
   { icon: Award, label: "Years of Experience", value: "20+" },
   { icon: Trophy, label: "Championships", value: "50+" },
   { icon: Star, label: "Black Belts Produced", value: "250+" },
@@ -19,63 +19,63 @@ const leaders = [
     name: "Somnath Karate & Fitness Academy",
     position: "Instructor In-charge  : Sensei Somnath Kari",
     image: "/organization/image8.jpg?height=400&width=400",
-    achievements: ["2nd Dan Black Belt"],
+    // achievements: ["2nd Dan Black Belt"],
     // experience: "25+ years",
   },
   {
     name: "Ayan’s Institute Of Karate",
     position: "Instructor In-charge  : Sensei Ayan Adhikary",
     image: "/organization/image7.jpg?height=400&width=400",
-    achievements: ["1st Dan Black Belt"],
+    // achievements: ["1st Dan Black Belt"],
     // experience: "18+ years",
   },
   {
     name: "Inzul’s Karate Academy",
     position: "Instructor In-charge  : Sensei Sk Inzul Haque ",
     image: "/organization/image3.jpg?height=400&width=400",
-    achievements: ["1st Dan Black Belt"],
+    // achievements: ["1st Dan Black Belt"],
     // experience: "30+ years",
   },
   {
     name: "Subhas Karate Academy",
     position: "Instructor In-charge  : Sensei Subhas Pandit",
     image: "/organization/image4.jpg?height=400&width=400",
-    achievements: ["1st Dan Black Belt"],
+    // achievements: ["1st Dan Black Belt"],
     // experience: "25+ years",
   },
   {
     name: "Trideep Karate Academy",
     position: " Instructor In-charge  : Sensei Trideep Kumar Maji",
     image: "/organization/image5.jpg?height=400&width=400",
-    achievements: ["1st Dan Black Belt"],
+    // achievements: ["1st Dan Black Belt"],
     // experience: "18+ years",
   },
   {
     name: "Bhabesh Karate Academy",
     position: "Instructor In-charge  : Sensei Bhabesh Dalui",
     image: "/organization/image6.jpg?height=400&width=400",
-    achievements: ["1st Dan Black Belt"],
+    // achievements: ["1st Dan Black Belt"],
     // experience: "30+ years",
   },
   {
     name: "Surojit’s  Shotokan School of Karate",
     position: "Instructor In-charge  : Sensei Surojit Mondal",
     image: "/organization/image1.jpg?height=400&width=400",
-    achievements: ["1st Dan Black Belt"],
+    // achievements: ["1st Dan Black Belt"],
     // experience: "25+ years",
   },
   {
     name: "Pratik Karate Academy – South 24 PGS",
     position: "Instructor In-charge  : Sensei Pratik Naskar",
     image: "/organization/image2.jpg?height=400&width=400",
-    achievements: ["2nd Dan Black Belt"],
+    // achievements: ["2nd Dan Black Belt"],
     // experience: "18+ years",
   },
   {
     name: "Sriza Karate Academy",
     position: "Instructor In-charge  : Sensei Sriza Jana",
     image: "/organization/image9.jpg?height=400&width=400",
-    achievements: ["2nd Dan Black Belt"],
+    // achievements: ["2nd Dan Black Belt"],
     // experience: "30+ years",
   },
 ]
@@ -107,7 +107,7 @@ export default function LegalPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900">
       {/* Hero Section */}
-      <div ref={ref} className="relative h-[60vh] overflow-hidden flex items-center justify-center">
+      {/* <div ref={ref} className="relative h-[60vh] overflow-hidden flex items-center justify-center">
         <motion.div style={{ y }} className="absolute inset-0 z-0">
           <Image
             src="/images/banner2.jpg?height=1080&width=1920"
@@ -134,10 +134,10 @@ export default function LegalPage() {
             Decades of Experience, Lifetime of Excellence
           </motion.p>
         </div>
-      </div>
+      </div> */}
 
       {/* Stats Section */}
-      <div className="bg-black/50 backdrop-blur-sm py-16">
+      {/* <div className="bg-black/50 backdrop-blur-sm py-16">
         <div className="container mx-auto px-4">
           <motion.div
             variants={container}
@@ -155,7 +155,7 @@ export default function LegalPage() {
             ))}
           </motion.div>
         </div>
-      </div>
+      </div> */}
 
       {/* Leaders Grid */}
       <div className="container mx-auto px-4 py-24">
@@ -186,7 +186,7 @@ export default function LegalPage() {
                 <div className="p-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{leader.name}</h3>
                   <p className="text-yellow-400 mb-4">{leader.position}</p>
-                  <div className="space-y-2">
+                  {/* <div className="space-y-2">
                     {leader.achievements.map((achievement) => (
                       <Badge
                         key={achievement}
@@ -196,7 +196,7 @@ export default function LegalPage() {
                         {achievement}
                       </Badge>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               </Card>
             </motion.div>

@@ -117,8 +117,8 @@ export default function BlackBeltHoldersPage() {
                       <th className="text-left py-4 px-4 text-yellow-400 font-bold text-sm">S.No</th>
                       <th className="text-left py-4 px-4 text-yellow-400 font-bold text-sm">Name</th>
                       <th className="text-left py-4 px-4 text-yellow-400 font-bold text-sm">Rank</th>
-                      <th className="text-left py-4 px-4 text-yellow-400 font-bold text-sm">Specialization</th>
-                      <th className="text-left py-4 px-4 text-yellow-400 font-bold text-sm">Experience</th>
+                      {/* <th className="text-left py-4 px-4 text-yellow-400 font-bold text-sm">Specialization</th> */}
+                      {/* <th className="text-left py-4 px-4 text-yellow-400 font-bold text-sm">Experience</th> */}
                     </tr>
                   </thead>
                   <tbody>
@@ -139,8 +139,8 @@ export default function BlackBeltHoldersPage() {
                             {belt.rank}
                           </Badge>
                         </td>
-                        <td className="py-4 px-4 text-gray-300 text-sm">{belt.specialization}</td>
-                        <td className="py-4 px-4 text-gray-400 text-sm">{belt.yearsOfExperience} years</td>
+                        {/* <td className="py-4 px-4 text-gray-300 text-sm">{belt.specialization}</td> */}
+                        {/* <td className="py-4 px-4 text-gray-400 text-sm">{belt.yearsOfExperience} years</td> */}
                       </motion.tr>
                     ))}
                   </tbody>
@@ -168,14 +168,14 @@ export default function BlackBeltHoldersPage() {
                         <p className="text-gray-400 text-xs uppercase tracking-wide">Name</p>
                         <p className="text-white font-semibold">{belt.name}</p>
                       </div>
-                      <div>
+                      {/* <div>
                         <p className="text-gray-400 text-xs uppercase tracking-wide">Specialization</p>
                         <p className="text-gray-300">{belt.specialization}</p>
-                      </div>
-                      <div>
+                      </div> */}
+                      {/* <div>
                         <p className="text-gray-400 text-xs uppercase tracking-wide">Experience</p>
                         <p className="text-gray-300">{belt.yearsOfExperience} years</p>
-                      </div>
+                      </div> */}
                     </div>
                   </motion.div>
                 ))}
