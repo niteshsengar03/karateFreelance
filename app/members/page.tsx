@@ -12,24 +12,27 @@ const stateMembers = [
   {
     id: 1,
     name: "Sensei Mrinmoy Acharya",
-    image: "/placeholder.svg?height=400&width=400",
-    location: "West Bengal",
-    members: 250,
+    image: "/stateAffliated/SenseiMrinmoyAcharya.jpg?height=400&width=400",
+    position: "General Secretary",
     achievements: ["Shotokan Traditional Karate-Do Association (West Bengal)"],
-    yearEstablished: 2010,
   },
   {
     id: 2,
-    name: "Warrior's Path Dojo",
-    image: "/placeholder.svg?height=400&width=400",
-    location: "California",
-    members: 300,
-    achievements: ["National Tournament Host", "Community Outreach Award"],
-    yearEstablished: 2008,
+    name: "Sensei MD Ali Raza",
+    image: "/stateAffliated/SenseiMdAliRaza.jpg?height=400&width=400",
+    position: "President",
+    achievements: ["Shotokan Traditional Karate-Do Association (Jharkhand)"],
   },
-  // Add more state members...
+  {
+    id:3,
+    name:"Sensei Imyuangdang",
+    image:"/stateAffliated/Senseiimyuangdang.jpg?height=400&width=400",
+    position:"President",
+    achievements: ["Shotokan Traditional Karate-Do Association (Nagaland)"],
+  }
 ]
 
+// add future affiliated Members Here
 const affiliatedMembers = [
   {
     id: 1,
@@ -40,15 +43,15 @@ const affiliatedMembers = [
     achievements: ["International Partner", "Excellence Award"],
     yearEstablished: 2015,
   },
-  {
-    id: 2,
-    name: "Rising Sun Martial Arts",
-    image: "/placeholder.svg?height=400&width=400",
-    location: "Tokyo, Japan",
-    members: 220,
-    achievements: ["Cultural Exchange Program", "Youth Development Award"],
-    yearEstablished: 2012,
-  },
+  // {
+  //   id: 2,
+  //   name: "Rising Sun Martial Arts",
+  //   image: "/placeholder.svg?height=400&width=400",
+  //   location: "Tokyo, Japan",
+  //   members: 220,
+  //   achievements: ["Cultural Exchange Program", "Youth Development Award"],
+  //   yearEstablished: 2012,
+  // },
   // Add more affiliated members...
 ]
 
@@ -84,13 +87,13 @@ export default function MembersPage() {
           <div className="flex justify-center mb-8">
             <TabsList className="bg-gray-900/50 backdrop-blur-sm border border-gray-800">
               <TabsTrigger value="state" className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black">
-                State Members
+                State Affliated
               </TabsTrigger>
               <TabsTrigger
                 value="affiliated"
                 className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
               >
-                Affiliated Members
+                Group Affliated
               </TabsTrigger>
             </TabsList>
           </div>
@@ -245,21 +248,21 @@ export default function MembersPage() {
                         
                         <div className="space-y-1.5 text-gray-300 mb-2">
                           <div className="flex items-center gap-2">
-                            <MapPin className="w-3 h-3 text-yellow-400 flex-shrink-0" />
-                            <span className="text-xs">{member.location}</span>
+                            {/* <MapPin className="w-3 h-3 text-yellow-400 flex-shrink-0" /> */}
+                            <span className="text-xs">{member.position}</span>
                           </div>
-                          <div className="flex items-center gap-2">
+                          {/* <div className="flex items-center gap-2">
                             <Users className="w-3 h-3 text-yellow-400 flex-shrink-0" />
                             <span className="text-xs">{member.members} Members</span>
-                          </div>
-                          <div className="flex items-center gap-2">
+                          </div> */}
+                          {/* <div className="flex items-center gap-2">
                             <Calendar className="w-3 h-3 text-yellow-400 flex-shrink-0" />
                             <span className="text-xs">Est. {member.yearEstablished}</span>
-                          </div>
+                          </div> */}
                         </div>
 
                         <div className="pt-2 border-t border-gray-700">
-                          <h4 className="text-xs font-semibold text-yellow-400 mb-1 uppercase tracking-wider">Achievements</h4>
+                          <h4 className="text-xs font-semibold text-yellow-400 mb-1 uppercase tracking-wider">Location</h4>
                           <div className="space-y-0.5">
                             {member.achievements.slice(0, 1).map((achievement, ai) => (
                               <div key={`state-${member.id}-ach-${ai}`} className="flex items-start gap-1.5">
@@ -323,10 +326,10 @@ export default function MembersPage() {
                             <Users className="w-3 h-3 text-yellow-400 flex-shrink-0" />
                             <span className="text-xs">{member.members} Members</span>
                           </div>
-                          <div className="flex items-center gap-2">
+                          {/* <div className="flex items-center gap-2">
                             <Calendar className="w-3 h-3 text-yellow-400 flex-shrink-0" />
                             <span className="text-xs">Est. {member.yearEstablished}</span>
-                          </div>
+                          </div> */}
                         </div>
 
                         <div className="pt-2 border-t border-gray-700">
