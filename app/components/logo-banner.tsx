@@ -27,10 +27,10 @@ const logos = [
     src: "/logos/logo6.jpg",
     alt: "Brand Logo 6",
   },
-  // {
-  //   src: "/logos/logo7.jpg",
-  //   alt: "Brand Logo 6",
-  // },
+  {
+    src: "/logos/logo7.jpg",
+    alt: "Brand Logo 7",
+  },
   // {
   //   src: "/logos/logo8.jpg",
   //   alt: "Brand Logo 6",
