@@ -79,18 +79,18 @@ const instructors = [
   {
     id: 1,
     name: "MASAHIKO TANAKA",
-    role: "Supreme Master : 8th Dan Black Belt",
+    role: "Supreme Master",
     image: "/history/mashiko.jpg?height=400&width=300",
     description:
-      "He is a renowned master known as Hasha for his power and trust. A winner of the All Japan Karatedo Championships and IAKF World Championship, he has played a key role in spreading traditional Karate worldwide. As a respected instructor, he emphasizes discipline, respect, and personal growth, inspiring generations of Karate practitioners.",
+      "Japan Traditional Karate Association (JTK) World Head Quarter Tokyo, Japan",
   },
   {
     id: 2,
     name: "YUKO TAKAHASHI  ",
-    role: "President : 7th Dan Black Belt",
+    role: "President",
     image: "/history/yoko.jpg?height=400&width=300",
     description:
-      "She is celebrated for her expertise, dedication, and contributions to the Karate community. As a respected instructor, she is committed to preserving traditional values while fostering discipline, respect, and personal growth. Her teachings inspire students to reach their full potential in both Karate and life, making a lasting impact on practitioners worldwide.",
+      "Japan Traditional Karate Association(JTK) World Head Quarter Tokyo,Japan",
   },
   // {
   //   id: 3,
