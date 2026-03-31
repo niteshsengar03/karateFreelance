@@ -6,6 +6,7 @@
   "/about/page": "app/about/page.js",
   "/black-belt-holders/indian-blackbelt/page": "app/black-belt-holders/indian-blackbelt/page.js",
   "/black-belt-holders/japan-blackbelt/page": "app/black-belt-holders/japan-blackbelt/page.js",
+  "/cells/invidualMembers/page": "app/cells/invidualMembers/page.js",
   "/cells/legal/page": "app/cells/legal/page.js",
   "/cells/media/page": "app/cells/media/page.js",
   "/cells/medical/page": "app/cells/medical/page.js",

@@ -1,12 +1,17 @@
-"use client"
+"use client";
 
-import { motion, AnimatePresence } from "framer-motion"
-import { useState } from "react"
-import Image from "next/image"
-import { Card } from "@/app/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/app/components/ui/tabs"
-import { MapPin, Users, Award, Calendar } from "lucide-react"
-import ComingSoon from "../components/commingsoon"
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import Image from "next/image";
+import { Card } from "@/app/components/ui/card";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/app/components/ui/tabs";
+import { MapPin, Users, Award, Calendar } from "lucide-react";
+import ComingSoon from "../components/commingsoon";
 
 const stateMembers = [
   {
@@ -24,36 +29,177 @@ const stateMembers = [
     achievements: ["Shotokan Traditional Karate-Do Association (Jharkhand)"],
   },
   {
-    id:3,
-    name:"Sensei Imyuangdang",
-    image:"/stateAffliated/Senseiimyuangdang.jpg?height=400&width=400",
-    position:"President",
+    id: 3,
+    name: "Sensei Imyuangdang",
+    image: "/stateAffliated/Senseiimyuangdang.jpg?height=400&width=400",
+    position: "President",
     achievements: ["Shotokan Traditional Karate-Do Association (Nagaland)"],
-  }
-]
+  },
+];
 
 // add future affiliated Members Here
+// const affiliatedMembers = [
+//   // {
+//   //   id: 1,
+//   //   name: "Dragon Warriors Dojo",
+//   //   image: "/placeholder.svg?height=400&width=400",
+//   //   location: "Toronto, Canada",
+//   //   // members: 180,
+//   //   achievements: ["International Partner", "Excellence Award"],
+//   //   yearEstablished: 2015,
+//   // },
+//   // {
+//   //   id: 2,
+//   //   name: "Rising Sun Martial Arts",
+//   //   image: "/placeholder.svg?height=400&width=400",
+//   //   location: "Tokyo, Japan",
+//   //   members: 220,
+//   //   achievements: ["Cultural Exchange Program", "Youth Development Award"],
+//   //   yearEstablished: 2012,
+//   // },
+//   // Add more affiliated members...
+// ]
+
 const affiliatedMembers = [
   {
     id: 1,
-    name: "Dragon Warriors Dojo",
-    image: "/placeholder.svg?height=400&width=400",
-    location: "Toronto, Canada",
-    members: 180,
-    achievements: ["International Partner", "Excellence Award"],
-    yearEstablished: 2015,
+    name: "Shihan Amin Ali",
+    image: "/groupAffiliated/Shihan Amin Ali.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Elite Shotokan Karate Academy"],
+    yearEstablished: null,
   },
-  // {
-  //   id: 2,
-  //   name: "Rising Sun Martial Arts",
-  //   image: "/placeholder.svg?height=400&width=400",
-  //   location: "Tokyo, Japan",
-  //   members: 220,
-  //   achievements: ["Cultural Exchange Program", "Youth Development Award"],
-  //   yearEstablished: 2012,
-  // },
-  // Add more affiliated members...
-]
+  {
+    id: 2,
+    name: "Shihan Tapan Dhara",
+    image: "/groupAffiliated/Shihan Tapan Dhara.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Indian Traditional Karate Academy"],
+    yearEstablished: null,
+  },
+  {
+    id: 3,
+    name: "Shihan Debnath Chakraborty",
+    image:
+      "/groupAffiliated/Shihan Debnath Chakraborty.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Bengal Shotokan Karate Academy"],
+    yearEstablished: null,
+  },
+  {
+    id: 4,
+    name: "Sensei Trideep Kumar Maji",
+    image:
+      "/groupAffiliated/Sensei Trideep Kumar Maji.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Trideep Karate Academy"],
+    yearEstablished: null,
+  },
+  {
+    id: 5,
+    name: "Sensei Inzul Haque",
+    image: "/groupAffiliated/Sensei Inzul Haque.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Inzul's Karate Academy"],
+    yearEstablished: null,
+  },
+  {
+    id: 6,
+    name: "Sensei Bhabesh Dalui",
+    image: "/groupAffiliated/Sensei Bhabesh Dalui.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Bhabesh Karate Academy"],
+    yearEstablished: null,
+  },
+  {
+    id: 7,
+    name: "Sensei Subhas Pandit",
+    image: "/groupAffiliated/Sensei Subhas Pandit.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Subhas Karate Academy"],
+    yearEstablished: null,
+  },
+  {
+    id: 8,
+    name: "Sensei Pratik Naskar",
+    image: "/groupAffiliated/Sensei Pratik Naskar.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Pratik Karate Academy - South 24 Parganas"],
+    yearEstablished: null,
+  },
+  {
+    id: 9,
+    name: "Sensei MD Hasanur Khan",
+    image: "/groupAffiliated/Sensei MD Hasanur Khan.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["HK Shotokan Karate-Do School"],
+    yearEstablished: null,
+  },
+  {
+    id: 10,
+    name: "Sensei Ayan Adhikary",
+    image: "/groupAffiliated/Sensei Ayan Adhikary.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Ayan's Institute of Karate"],
+    yearEstablished: null,
+  },
+  {
+    id: 11,
+    name: "Sensei Somnath Kari",
+    image: "/groupAffiliated/Sensei Somnath Kari.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Somnath Karate & Fitness Academy"],
+    yearEstablished: null,
+  },
+  {
+    id: 12,
+    name: "Sensei Surajit Mondal",
+    image: "/groupAffiliated/Sensei Surajit Mondal.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Surajit Shotokan School of Karate"],
+    yearEstablished: null,
+  },
+  {
+    id: 13,
+    name: "Shihan Mrinmoy Acharya",
+    image: "/groupAffiliated/Shihan Mrinmoy Acharya.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Aryan Self Defence and Karate Academy"],
+    yearEstablished: null,
+  },
+  {
+    id: 14,
+    name: "Shihan Dudhkumar Samantha",
+    image:
+      "/groupAffiliated/Shihan Dudhkumar Samantha.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Jaugaur Karate Association of Indian"],
+    yearEstablished: null,
+  },
+  {
+    id: 15,
+    name: "Shihan Rajkumar Bag",
+    image: "/groupAffiliated/Shihan Rajkumar Bag.jpeg?height=400&width=400",
+    location: "",
+    members: null,
+    achievements: ["Tatarkhan Tiger Karate Club"],
+    yearEstablished: null,
+  },
+];
 
 const container = {
   hidden: { opacity: 0 },
@@ -63,30 +209,45 @@ const container = {
       staggerChildren: 0.1,
     },
   },
-}
+};
 
 const item = {
   hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0 },
-}
+};
 
 export default function MembersPage() {
-  const [selectedTab, setSelectedTab] = useState("state")
+  const [selectedTab, setSelectedTab] = useState("state");
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900 pt-24">
       <div className="container mx-auto px-4 py-12">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Our Network</h1>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-12"
+        >
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our Network
+          </h1>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            Discover our extensive network of state members and affiliated dojos across the globe.
+            Discover our extensive network of state members and affiliated dojos
+            across the globe.
           </p>
         </motion.div>
 
-        <Tabs defaultValue="state" value={selectedTab} onValueChange={setSelectedTab} className="w-full">
+        <Tabs
+          defaultValue="state"
+          value={selectedTab}
+          onValueChange={setSelectedTab}
+          className="w-full"
+        >
           <div className="flex justify-center mb-8">
             <TabsList className="bg-gray-900/50 backdrop-blur-sm border border-gray-800">
-              <TabsTrigger value="state" className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black">
+              <TabsTrigger
+                value="state"
+                className="data-[state=active]:bg-yellow-400 data-[state=active]:text-black"
+              >
                 State Affliated
               </TabsTrigger>
               <TabsTrigger
@@ -97,114 +258,6 @@ export default function MembersPage() {
               </TabsTrigger>
             </TabsList>
           </div>
-
-          {/* <AnimatePresence mode="wait">
-            <TabsContent key="state" value="state" className="mt-0">
-              <motion.div
-                variants={container}
-                initial="hidden"
-                animate="show"
-                exit={{ opacity: 0, transition: { duration: 0.2 } }}
-                className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-              >
-                {stateMembers.map((member) => (
-                  <motion.div key={member.id} variants={item}>
-                    <Card className="bg-gray-900/50 backdrop-blur-sm border-gray-800 overflow-hidden group">
-                      <div className="relative aspect-video overflow-hidden">
-                        <Image
-                          src={member.image || "/placeholder.svg"}
-                          alt={member.name}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                      </div>
-                      <div className="p-6">
-                        <h3 className="text-xl font-bold text-white mb-4">{member.name}</h3>
-                        <div className="space-y-3 text-gray-400">
-                          <div className="flex items-center">
-                            <MapPin className="w-5 h-5 mr-2 text-yellow-400" />
-                            {member.location}
-                          </div>
-                          <div className="flex items-center">
-                            <Users className="w-5 h-5 mr-2 text-yellow-400" />
-                            {member.members} Active Members
-                          </div>
-                          <div className="flex items-center">
-                            <Calendar className="w-5 h-5 mr-2 text-yellow-400" />
-                            Est. {member.yearEstablished}
-                          </div>
-                        </div>
-                        <div className="mt-4 pt-4 border-t border-gray-800">
-                          <div className="text-sm font-semibold text-gray-400 mb-2">Achievements</div>
-                          <div className="space-y-1">
-                            {member.achievements.map((achievement) => (
-                              <div key={achievement} className="flex items-center text-sm text-gray-500">
-                                <Award className="w-4 h-4 mr-2 text-yellow-400" />
-                                {achievement}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </Card>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </TabsContent>
-
-            <TabsContent value="affiliated" className="mt-0">
-              <motion.div
-                variants={container}
-                initial="hidden"
-                animate="show"
-                exit={{ opacity: 0, transition: { duration: 0.2 } }}
-                className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
-              >
-                {affiliatedMembers.map((member) => (
-                  <motion.div key={member.id} variants={item}>
-                    <Card className="bg-gray-900/50 backdrop-blur-sm border-gray-800 overflow-hidden group">
-                      <div className="relative aspect-video overflow-hidden">
-                        <Image
-                          src={member.image || "/placeholder.svg"}
-                          alt={member.name}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                      </div>
-                      <div className="p-6">
-                        <h3 className="text-xl font-bold text-white mb-4">{member.name}</h3>
-                        <div className="space-y-3 text-gray-400">
-                          <div className="flex items-center">
-                            <MapPin className="w-5 h-5 mr-2 text-yellow-400" />
-                            {member.location}
-                          </div>
-                          <div className="flex items-center">
-                            <Users className="w-5 h-5 mr-2 text-yellow-400" />
-                            {member.members} Active Members
-                          </div>
-                          <div className="flex items-center">
-                            <Calendar className="w-5 h-5 mr-2 text-yellow-400" />
-                            Est. {member.yearEstablished}
-                          </div>
-                        </div>
-                        <div className="mt-4 pt-4 border-t border-gray-800">
-                          <div className="text-sm font-semibold text-gray-400 mb-2">Achievements</div>
-                          <div className="space-y-1">
-                            {member.achievements.map((achievement) => (
-                              <div key={achievement} className="flex items-center text-sm text-gray-500">
-                                <Award className="w-4 h-4 mr-2 text-yellow-400" />
-                                {achievement}
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </Card>
-                  </motion.div>
-                ))}
-              </motion.div>
-            </TabsContent>
-          </AnimatePresence> */}
 
           {/* New Alternating Layout */}
           <AnimatePresence mode="wait">
@@ -234,7 +287,7 @@ export default function MembersPage() {
                           src={member.image || "/placeholder.svg"}
                           alt={member.name}
                           fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          className="object-contain bg-white transition-transform duration-500 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
@@ -243,9 +296,11 @@ export default function MembersPage() {
                     {/* Text Content - Small Right Side */}
                     <motion.div className="md:col-span-2">
                       <div className="bg-gray-900/50 backdrop-blur-sm border border-yellow-400/20 rounded-lg p-4">
-                        <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
+                        <h3 className="text-lg font-bold text-white mb-1">
+                          {member.name}
+                        </h3>
                         <div className="w-6 h-0.5 bg-yellow-400 mb-2"></div>
-                        
+
                         <div className="space-y-1.5 text-gray-300 mb-2">
                           <div className="flex items-center gap-2">
                             {/* <MapPin className="w-3 h-3 text-yellow-400 flex-shrink-0" /> */}
@@ -262,14 +317,23 @@ export default function MembersPage() {
                         </div>
 
                         <div className="pt-2 border-t border-gray-700">
-                          <h4 className="text-xs font-semibold text-yellow-400 mb-1 uppercase tracking-wider">Location</h4>
+                          <h4 className="text-xs font-semibold text-yellow-400 mb-1 uppercase tracking-wider">
+                            Location
+                          </h4>
                           <div className="space-y-0.5">
-                            {member.achievements.slice(0, 1).map((achievement, ai) => (
-                              <div key={`state-${member.id}-ach-${ai}`} className="flex items-start gap-1.5">
-                                <Award className="w-2 h-2 text-yellow-400 flex-shrink-0 mt-0.5" />
-                                <span className="text-xs text-gray-400">{achievement}</span>
-                              </div>
-                            ))}
+                            {member.achievements
+                              .slice(0, 1)
+                              .map((achievement, ai) => (
+                                <div
+                                  key={`state-${member.id}-ach-${ai}`}
+                                  className="flex items-start gap-1.5"
+                                >
+                                  <Award className="w-2 h-2 text-yellow-400 flex-shrink-0 mt-0.5" />
+                                  <span className="text-xs text-gray-400">
+                                    {achievement}
+                                  </span>
+                                </div>
+                              ))}
                           </div>
                         </div>
                       </div>
@@ -305,7 +369,7 @@ export default function MembersPage() {
                           src={member.image || "/placeholder.svg"}
                           alt={member.name}
                           fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
+                          className="object-contain bg-white transition-transform duration-500 group-hover:scale-110"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                       </div>
@@ -314,33 +378,31 @@ export default function MembersPage() {
                     {/* Text Content - Right Side - Compact */}
                     <motion.div className="md:col-span-2">
                       <div className="bg-gray-900/50 backdrop-blur-sm border border-yellow-400/20 rounded-lg p-4">
-                        <h3 className="text-lg font-bold text-white mb-1">{member.name}</h3>
+                        <h3 className="text-lg font-bold text-white mb-1">
+                          {member.name}
+                        </h3>
                         <div className="w-6 h-0.5 bg-yellow-400 mb-2"></div>
-                        
-                        <div className="space-y-1.5 text-gray-300 mb-2">
-                          <div className="flex items-center gap-2">
-                            <MapPin className="w-3 h-3 text-yellow-400 flex-shrink-0" />
-                            <span className="text-xs">{member.location}</span>
-                          </div>
-                          <div className="flex items-center gap-2">
-                            <Users className="w-3 h-3 text-yellow-400 flex-shrink-0" />
-                            <span className="text-xs">{member.members} Members</span>
-                          </div>
-                          {/* <div className="flex items-center gap-2">
-                            <Calendar className="w-3 h-3 text-yellow-400 flex-shrink-0" />
-                            <span className="text-xs">Est. {member.yearEstablished}</span>
-                          </div> */}
-                        </div>
+
+                        <div className="space-y-1.5 text-gray-300 mb-2"></div>
 
                         <div className="pt-2 border-t border-gray-700">
-                          <h4 className="text-xs font-semibold text-yellow-400 mb-1 uppercase tracking-wider">Achievements</h4>
+                          <h4 className="text-xs font-semibold text-yellow-400 mb-1 uppercase tracking-wider">
+                            Instructor-In-Charge
+                          </h4>
                           <div className="space-y-0.5">
-                            {member.achievements.slice(0, 1).map((achievement, ai) => (
-                              <div key={`affiliated-${member.id}-ach-${ai}`} className="flex items-start gap-1.5">
-                                <Award className="w-2 h-2 text-yellow-400 flex-shrink-0 mt-0.5" />
-                                <span className="text-xs text-gray-400">{achievement}</span>
-                              </div>
-                            ))}
+                            {member.achievements
+                              .slice(0, 1)
+                              .map((achievement, ai) => (
+                                <div
+                                  key={`affiliated-${member.id}-ach-${ai}`}
+                                  className="flex items-start gap-1.5"
+                                >
+                                  <Award className="w-2 h-2 text-yellow-400 flex-shrink-0 mt-0.5" />
+                                  <span className="text-xs text-gray-400">
+                                    {achievement}
+                                  </span>
+                                </div>
+                              ))}
                           </div>
                         </div>
                       </div>
@@ -353,6 +415,5 @@ export default function MembersPage() {
         </Tabs>
       </div>
     </div>
-  )
+  );
 }
-
