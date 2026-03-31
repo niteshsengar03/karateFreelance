@@ -81,7 +81,7 @@ export const indianBlackBeltHolders: BlackBeltHolder[] = [
     id: 10,
     sno: "STKADAN/01-010",
     name: "SOMNATH KARI",
-    rank: "2nd Dan",
+    rank: "3rd Dan",
     date: "18/05/2025",
   },
   {

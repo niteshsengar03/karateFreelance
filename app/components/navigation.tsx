@@ -121,6 +121,11 @@ const menuItems: NavigationCategory[] = [
         name: "CELLS",
         href: "/individualMembers",
         subItems: [
+          {
+            type: "link",
+            name: "INDIVIDUAL MEMBERS",
+            href: "/cells/invidualMembers",
+          },
           { type: "link", name: "LEGAL CELLS", href: "/cells/legal" },
           { type: "link", name: "MEDIA CELLS", href: "/cells/media" },
           { type: "link", name: "MEDICAL CELLS", href: "/cells/medical" },
@@ -153,9 +158,26 @@ const menuItems: NavigationCategory[] = [
         name: "AFFILIATION FORM",
         fileName: "Affiliation-Form.pdf",
       },
-      { type: "pdf", name: "EXAM FORM", fileName: "Admission-Form.pdf" },
+      {
+        type: "pdf",
+        name: "AFFILIATION FORM-WB",
+        fileName: "Affiliation-Form-WB.pdf",
+      },
+      {
+        type: "pdf",
+        name: "KYU BELT EXAM FM",
+        fileName: "Kyu-Belt-Exam-FORM.jpg.pdf",
+      },
+      {
+        type: "pdf",
+        name: "BLACK BELT EXAM FM",
+        fileName: "Black-Belt-Exam-FORM.jpg.pdf",
+      },
       { type: "pdf", name: "SYLLABUS", fileName: "Syllabus.pdf" },
-      { type: "pdf", name: "CERTIFICATE SAMPLE", fileName: "sample.pdf" },
+      { type: "pdf", name: "IN CERTIFICATE SMP", fileName: "India Black Belt SAMPLE.jpg.pdf" },
+      { type: "pdf", name: "KYU CERTIFICATE SMP", fileName: "Kyu Certificate Sample.jpg.pdf" },
+      { type: "pdf", name: "JP CERTIFICATE SMP", fileName: "JTK Japan Black Belt Sample.pdf" },
+
     ],
   },
 ];
