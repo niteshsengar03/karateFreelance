@@ -1,25 +1,41 @@
-"use client"
+"use client";
 
-import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef } from "react"
-import Image from "next/image"
-import { Button } from "@/app/components/ui/button"
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import Image from "next/image";
+import { Button } from "@/app/components/ui/button";
 
 export function ParallaxHero() {
-  const ref = useRef(null)
+  const ref = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
-  })
+  });
 
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0])
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 495);
+
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   return (
     <div ref={ref} className="relative h-screen overflow-hidden">
       <motion.div style={{ y, opacity }} className="absolute inset-0">
         <Image
-          src="/home_image.jpg?height=1080&width=1920&text=Martial+Arts+Background"
+          src={
+            isMobile
+              ? "/mainPage.jpeg?height=1080&width=1080"
+              : "/home_image.jpg?height=1080&width=1920&text=Martial+Arts+Background"
+          }
           alt="Martial Arts Background"
           fill
           className="object-cover"
@@ -54,14 +70,16 @@ export function ParallaxHero() {
           <Button
             size="lg"
             className="bg-yellow-500 hover:bg-yellow-600"
-            onClick={() => window.open("https://forms.gle/7TArc6KcGSptMWhk8", "_blank")}
+            onClick={() =>
+              window.open("https://forms.gle/7TArc6KcGSptMWhk8", "_blank")
+            }
           >
-           CONTACT US
+            CONTACT US
           </Button>
         </motion.div>
       </div>
     </div>
-  )
+  );
 }
 
 // import Image from "next/image"
@@ -98,4 +116,3 @@ export function ParallaxHero() {
 //     </div>
 //   )
 // }
-
