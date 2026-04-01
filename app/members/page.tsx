@@ -35,6 +35,13 @@ const stateMembers = [
     position: "President",
     achievements: ["Shotokan Traditional Karate-Do Association (Nagaland)"],
   },
+  {
+    id:4,
+    name: "Sensei Sandeep Meghnath Kandolkar",
+    image :"/stateAffliated/Sensei Sandeep Meghnath Kandolkar.jpg?height=400&width=400",
+    position: "President",
+    achievements: ["Shotokan Traditional Karate-Do Association (Goa)"],
+  }
 ];
 
 // add future affiliated Members Here
