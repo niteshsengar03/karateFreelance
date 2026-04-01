@@ -83,7 +83,7 @@ const affiliatedMembers = [
     id: 3,
     name: "Shihan Debnath Chakraborty",
     image:
-      "/groupAffiliated/Shihan Debnath Chakraborty.jpeg?height=400&width=400",
+      "/groupAffiliated/SHIHAN DEBNATH CHAKRABORTY .jpg?height=400&width=400",
     location: "",
     members: null,
     achievements: ["Bengal Shotokan Karate Academy"],
@@ -184,7 +184,7 @@ const affiliatedMembers = [
     id: 14,
     name: "Shihan Dudhkumar Samantha",
     image:
-      "/groupAffiliated/Shihan Dudhkumar Samantha.jpeg?height=400&width=400",
+      "/groupAffiliated/SHIHAN DUDHKUMAR SAMANTA.jpg?height=400&width=400",
     location: "",
     members: null,
     achievements: ["Jaugaur Karate Association of Indian"],
@@ -193,7 +193,7 @@ const affiliatedMembers = [
   {
     id: 15,
     name: "Shihan Rajkumar Bag",
-    image: "/groupAffiliated/Shihan Rajkumar Bag.jpeg?height=400&width=400",
+    image: "/groupAffiliated/SHIHAN RAJKUMAR BAG .jpg?height=400&width=400",
     location: "",
     members: null,
     achievements: ["Tatarkhan Tiger Karate Club"],
