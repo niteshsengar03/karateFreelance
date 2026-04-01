@@ -515,10 +515,10 @@ export default function Home() {
                 <CarouselItem className="md:basis-1/3">
                   <div className="relative group rounded-lg overflow-hidden h-80 w-full">
                     <Image
-                      src="/gallary1.jpg?height=500&width=400"
+                      src="/5.jpeg?height=500&width=400"
                       alt="Gallery Image 1"
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-110"
+                      className="object-contain transition-transform duration-300 group-hover:scale-110"
                     />
                     <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
@@ -526,7 +526,7 @@ export default function Home() {
                 <CarouselItem className="md:basis-1/3">
                   <div className="relative group rounded-lg overflow-hidden h-80 w-full">
                     <Image
-                      src="/gallary2.jpg?height=500&width=400"
+                      src="/8A.jpg?height=500&width=400"
                       alt="Gallery Image 2"
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-110"
@@ -537,7 +537,7 @@ export default function Home() {
                 <CarouselItem className="md:basis-1/3">
                   <div className="relative group rounded-lg overflow-hidden h-80 w-full">
                     <Image
-                      src="/gallary3.jpg?height=500&width=400"
+                      src="/19.jpeg?height=500&width=400"
                       alt="Gallery Image 3"
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-110"
