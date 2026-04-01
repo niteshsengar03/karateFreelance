@@ -151,7 +151,7 @@ const menuItems: NavigationCategory[] = [
     ],
   },
   {
-    title: "JOIN US",
+    title: "DOWNLOAD",
     items: [
       {
         type: "pdf",

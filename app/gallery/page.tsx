@@ -7,28 +7,8 @@ import { Button } from "@/app/components/ui/button"
 
 const allGalleryImages = [
   {
-    title: "Special Events",
-    src: "/gallary6.jpg?height=400&width=600&text=Training",
-  },
-  {
     title: "Competition",
     src: "/gallary7.jpg?height=400&width=600&text=Competition",
-  },
-  {
-    title: "Myself",
-    src: "/gallary8.jpg?height=400&width=600&text=Kids+Class",
-  },
-  {
-    title: "Adult Class",
-    src: "/gallary1.jpg?height=400&width=600&text=Adult+Class",
-  },
-  {
-    title: "Belt Testing",
-    src: "/gallary2.jpg?height=400&width=600&text=Belt+Testing",
-  },
-  {
-    title: "Sparring",
-    src: "/gallary3.jpg?height=400&width=600&text=Sparring",
   },
   {
     title: "Meditation",
@@ -39,8 +19,24 @@ const allGalleryImages = [
     src: "/gallary5.jpg?height=400&width=600&text=Team+Building",
   },
   {
-    title: "Special Training",
-    src: "/gallary9.jpg?height=400&width=600&text=Special+Events",
+    title: "Training",
+    src: "/gallary1.jpg?height=400&width=600&text=Training",
+  },
+  {
+    title: "Students",
+    src: "/gallary2.jpeg?height=400&width=600&text=Students",
+  },
+  {
+    title: "Practice",
+    src: "/gallary3.jpg?height=400&width=600&text=Practice",
+  },
+  {
+    title: "Discipline",
+    src: "/gallary6.jpeg?height=400&width=600&text=Discipline",
+  },
+  {
+    title: "Achievement",
+    src: "/gallary8.jpg?height=400&width=600&text=Achievement",
   },
 ]
 
