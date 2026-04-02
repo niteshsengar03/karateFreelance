@@ -19,7 +19,7 @@ export function ParallaxHero() {
 
   useEffect(() => {
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 495);
+      setIsMobile(window.innerWidth < 600);
 
     };
     checkMobile();
