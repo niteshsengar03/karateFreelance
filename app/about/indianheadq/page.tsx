@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Crown } from "lucide-react";
 import {
   Award,
   Trophy,
@@ -59,72 +59,55 @@ export default function InstructorsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900">
       {/* Hero Section */}
-      <div className="relative h-[62vh] overflow-hidden flex items-center justify-center">
-        {/* <Image
-          src="/images/banner2.jpg?height=1080&width=1920&text=Martial+Arts+Instructors"
-          alt="Martial Arts Instructors"
-          fill
-          className="object-cover opacity-50"
-        /> */}
+      <div className="relative h-[70vh] overflow-hidden flex items-center justify-center bg-gradient-to-b from-gray-900 to-black">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 left-10 w-40 h-40 bg-yellow-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-yellow-600 rounded-full blur-3xl"></div>
+        </div>
+
         <div className="relative z-10 text-center text-white px-4">
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-block mb-6"
+          >
+          </motion.div>
+
+          {/* Main Title */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl md:text-7xl font-bold mb-6 text-white"
           >
-            INDIA NATIONAL HEAD QUARTERS
+            INDIA NATIONAL
+            <br />
+            <span className="text-yellow-400">HEAD QUARTERS</span>
           </motion.h1>
+
+          {/* Subtitle with animation */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8"
+          >
+            Official National Headquarters of Shotokan Traditional Karate-Do
+            Association
+          </motion.p>
+
+          {/* Decorative line */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-transparent mx-auto"
+          />
         </div>
       </div>
-      {/* <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6 text-white">Who We Are</h2>
-              <p className="text-gray-400 mb-6">
-                The JTK India Branch - Shotokan Traditional Karate-Do Association is the official representative of the
-                Japan Traditional Karate Association (JTKA) in India. Dedicated to the practice, preservation, and
-                promotion of traditional Shotokan Karate, our mission is to provide authentic training and foster a
-                community of disciplined, skilled, and respectful practitioners.
-              </p>
-              <p className="text-gray-400">
-                As a proud affiliate of JTK Japan, we follow the highest standards of karate instruction, ensuring that
-                our members gain a deep understanding of the art and its philosophy.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <Card className="bg-[#131B2E] border-[#1F2937]">
-                <CardContent className="p-0">
-                  <img
-                    src="/images/image3.jpg?height=300&width=400"
-                    alt="Karate training session"
-                    className="w-full h-full object-cover"
-                  />
-                </CardContent>
-              </Card>
-              <Card className="bg-[#131B2E] border-[#1F2937]">
-                <CardContent className="p-0">
-                  <img
-                    src="/images/image4.jpg?height=300&width=400"
-                    alt="Karate competition"
-                    className="w-full h-full object-cover"
-                  />
-                </CardContent>
-              </Card>
-              <Card className="bg-[#131B2E] border-[#1F2937] col-span-2">
-                <CardContent className="p-0">
-                  <img
-                    src="/images/image5.jpg?height=300&width=800"
-                    alt="Group training"
-                    className="w-full h-48 object-contain"
-                  />
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <section className="py-16">
         <div className="container mx-auto px-4 max-w-3xl">

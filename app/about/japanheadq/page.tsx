@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, Crown } from "lucide-react";
 import {
   Award,
   Trophy,
@@ -92,36 +92,26 @@ const instructors = [
     description:
       "Japan Traditional Karate Association(JTK) World Head Quarter Tokyo,Japan",
   },
-  // {
-  //   id: 3,
-  //   name: "MINORU KAWAWADA",
-  //   role: "Technical Advisor : 8th Dan Black Belt",
-  //   image: "/history/minoro.jpeg?height=400&width=300",
-  //   description: "He is renowned for his leadership, dedication, and contributions to the Karate community. As the owner of Hoitsukan Dojo and head of Kawawada Dojo, he preserves traditional values while promoting discipline, respect, and personal growth. His teachings inspire students to embrace the true spirit of Karate, making a lasting impact on practitioners worldwide.",
-  // },
   {
     id: 3,
     name: "AYANO TAKAKI",
     role: "Headquarters Instructor",
     image: "/history/ayano.jpg?height=400&width=300",
-    description:
-      "She is a skilled and respected Shotokan Karate practitioner, is known for her dedication to teaching and promoting the core values of discipline, respect, and perseverance. While not as widely recognized as some, her commitment to the martial art has made a lasting impact on her students and the broader Karate community.",
+    description: "",
   },
   {
     id: 4,
     name: "KATSUHIDE NAKAMURA",
     role: "Headquarters Instructor",
     image: "/history/kat.jpg?height=400&width=300",
-    description:
-      "He is a prominent figure in the Japan Traditional Karate Association (JTKA), is highly respected for his contributions to Shotokan Karate. His leadership has helped preserve and promote the authentic teachings of Karate, focusing on discipline, respect, and personal growth.He inspires practitioners worldwide. ",
+    description: "",
   },
   {
     id: 5,
     name: "ASUKA SASA",
     role: "Headquarters Instructor",
     image: "/history/asuka.jpg?height=400&width=300",
-    description:
-      "She is a skilled Shotokan Karate practitioner, is known for her technical proficiency and dedication to traditional Karate values. She emphasizes discipline, respect, and perseverance, inspiring students and preserving the rich traditions of Shotokan Karate.Her commitment continues to shape and influence the Karate community.",
+    description: "",
   },
 ];
 
@@ -144,22 +134,52 @@ export default function InstructorsPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-gray-900">
       {/* Hero Section */}
-      <div className="relative h-[70vh] overflow-hidden flex items-center justify-center">
-        {/* <Image
-          src="/images/banner2.jpg?height=1080&width=1920&text=Martial+Arts+Instructors"
-          alt="Martial Arts Instructors"
-          fill
-          className="object-cover opacity-50"
-        /> */}
+      <div className="relative h-[70vh] overflow-hidden flex items-center justify-center bg-gradient-to-b from-gray-900 to-black">
+        {/* Decorative background elements */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-10 left-10 w-40 h-40 bg-yellow-500 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-yellow-600 rounded-full blur-3xl"></div>
+        </div>
+
         <div className="relative z-10 text-center text-white px-4">
+          {/* Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="inline-block mb-6"
+          >
+          </motion.div>
+
+          {/* Main Title */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-5xl font-bold mb-4"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-5xl md:text-7xl font-bold mb-6 text-white"
           >
-            JAPAN HEAD QUARTERS
+            JAPAN
+            <br />
+            <span className="text-yellow-400">HEAD QUARTERS</span>
           </motion.h1>
+
+          {/* Subtitle with animation */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8"
+          >
+            Official World Headquarters of Japan Traditional Karate Association
+          </motion.p>
+
+          {/* Decorative line */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-transparent mx-auto"
+          />
         </div>
       </div>
       <section className="py-16">
@@ -207,56 +227,6 @@ export default function InstructorsPage() {
         </div>
       </section>
 
-      {/* Vision & Mission Section */}
-      {/* <section className="py-16 bg-[#131B2E]">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8">
-            <Card className="bg-[#0B1120] border-[#1F2937]">
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">Our Vision</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-400">
-                  Our vision is to spread the values of traditional karate across India, nurturing individuals who excel
-                  both on and off the mat.
-                </p>
-              </CardContent>
-            </Card>
-            <Card className="bg-[#0B1120] border-[#1F2937]">
-              <CardHeader>
-                <CardTitle className="text-2xl text-white">Our Mission</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <ul className="list-disc list-inside space-y-2 text-gray-400">
-                  <li>Provide authentic Shotokan Karate training aligned with JTKA standards.</li>
-                  <li>Develop disciplined and skilled karateka who embody respect, perseverance, and humility.</li>
-                  <li>Promote the cultural and philosophical essence of traditional Japanese karate.</li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section> */}
-
-      {/* What We Offer Section */}
-      {/* <section className="py-16">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">What We Offer</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {offerings.map((offering, index) => (
-              <Card key={index} className="bg-[#131B2E] border-[#1F2937]">
-                <CardHeader>
-                  <offering.icon className="w-10 h-10 mb-4 text-yellow-400" />
-                  <CardTitle className="text-xl text-white">{offering.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-400">{offering.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section> */}
       {/* Instructors Grid */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
@@ -293,29 +263,6 @@ export default function InstructorsPage() {
           ))}
         </motion.div>
       </div>
-      {/* Why Choose Us Section */}
-      {/* <section className="py-16 bg-[#131B2E]">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">
-            Why Choose Shotokan Traditional Karate-Do Association?
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {reasons.map((reason, index) => (
-              <Card key={index} className="bg-[#0B1120] border-[#1F2937]">
-                <CardHeader>
-                  <reason.icon className="w-10 h-10 mb-4 text-yellow-400" />
-                  <CardTitle className="text-xl text-white">
-                    {reason.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-400">{reason.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       {/* Our Presence & Join Us Section */}
       <section className="py-16">
