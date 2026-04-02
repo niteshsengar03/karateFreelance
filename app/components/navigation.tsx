@@ -165,18 +165,18 @@ const menuItems: NavigationCategory[] = [
       },
       {
         type: "pdf",
-        name: "KYU BELT EXAM FM",
+        name: "KYU BELT EXAM FORM",
         fileName: "Kyu-Belt-Exam-FORM.jpg.pdf",
       },
       {
         type: "pdf",
-        name: "BLACK BELT EXAM FM",
+        name: "BLACK BELT EXAM FORM",
         fileName: "Black-Belt-Exam-FORM.jpg.pdf",
       },
       { type: "pdf", name: "SYLLABUS", fileName: "Syllabus.pdf" },
-      { type: "pdf", name: "IN CERTIFICATE SMP", fileName: "India Black Belt SAMPLE.jpg.pdf" },
-      { type: "pdf", name: "KYU CERTIFICATE SMP", fileName: "Kyu Certificate Sample.jpg.pdf" },
-      { type: "pdf", name: "JP CERTIFICATE SMP", fileName: "JTK Japan Black Belt Sample.pdf" },
+      { type: "pdf", name: "IN CERTIFICATE SAMPLE", fileName: "India Black Belt SAMPLE.jpg.pdf" },
+      { type: "pdf", name: "KYU CERTIFICATE SAMPLE", fileName: "Kyu Certificate Sample.jpg.pdf" },
+      { type: "pdf", name: "JP CERTIFICATE SAMPLE", fileName: "JTK Japan Black Belt Sample.pdf" },
 
     ],
   },
